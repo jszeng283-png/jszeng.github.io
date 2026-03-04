@@ -436,6 +436,101 @@ body {
     border-bottom-color: var(--accent-color);
 }
 
+/* Books Section */
+.books {
+    padding: 4rem 0;
+}
+
+.books h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.books-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: flex-start;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.book-cover {
+    text-align: center;
+}
+
+.book-cover img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: scale(1.02);
+}
+
+.book-info h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.book-publisher {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-date {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.book-info h4 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.book-arguments {
+    list-style: none;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.book-arguments li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.book-arguments li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.book-contribution {
+    color: #555;
+    font-style: italic;
+    line-height: 1.7;
+    padding: 1rem;
+    background-color: var(--light-bg);
+    border-left: 4px solid var(--primary-color);
+    margin-top: 1.5rem;
+}
+
 /* Footer */
 .footer {
     background-color: var(--secondary-color);
@@ -452,7 +547,8 @@ body {
 @media (max-width: 768px) {
     .hero-content,
     .about-content,
-    .contact-content {
+    .contact-content,
+    .books-content {
         grid-template-columns: 1fr;
     }
 
@@ -468,7 +564,8 @@ body {
     .about h2,
     .research h2,
     .publications h2,
-    .contact h2 {
+    .contact h2,
+    .books h2 {
         font-size: 1.8rem;
     }
 
